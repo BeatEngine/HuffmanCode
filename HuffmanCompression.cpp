@@ -34,37 +34,9 @@ class CompressionTableElement
 
 
     char x;
-    short bit;
     int count;
 };
 
-class CTnode
-{
-    public:
-    char symbol;
-    CTnode* one;
-    CTnode* zero;
-
-    CTnode()
-    {
-        one = 0;
-        zero = 0;
-    }
-
-    CTnode(char sym)
-    {
-        one = 0;
-        zero = 0;
-        symbol = sym;
-    }
-
-    ~CTnode()
-    {
-        one->~CTnode();
-        zero->~CTnode();
-    }
-
-};
 
 class CodeTable
 {
